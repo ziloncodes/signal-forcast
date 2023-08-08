@@ -1,0 +1,454 @@
+/*Baskervville, serif, Anton, Raleway, sans-serif*/
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Baskervville', serif;
+}
+
+/*background image*/
+body::before {
+  content: '';
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.9), rgba(136, 136, 206, 0.8)), url(https://github.com/ziloncodes/signal-forcast/blob/main/nzdcad%20crop%20center.png?raw=true);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+/*First main Block section*/
+.fmh-block {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  border: 1px solid;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.fmh-top-block {
+  height: 2.5rem;
+  background-color: #040226;
+}
+
+.container {
+  width: 135rem;
+  margin: auto;
+  padding: 0 10px 0 10px;
+}
+
+.contents {
+  width: 125rem;
+  height: 100%;
+  justify-items: center;
+}
+
+.email-us {
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+  padding-top: 5px;
+}
+
+.sign-in {
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+.sign-up {
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+.link1 {
+  text-decoration: underline;
+  color: white;
+}
+
+.contents2 {
+  display: flex;
+  width: 15rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 0%;
+  right: 0.1%;
+  background: #6963cf;
+  justify-content: space-evenly;
+}
+
+.icons {
+  display: grid;
+  font-size: 2rem;
+}
+
+.link2 {
+  text-decoration: none;
+  color: black; 
+}
+
+select {
+  border: none;
+  background: inherit;
+  margin-top: 4px;
+}
+
+@media (max-width: 560px) {
+  
+}
+
+/*fmh middle block*/
+.fmh-middle-block {
+  height: 7.5rem;
+  width: 100%;
+  background-color: #01050f;
+}
+
+.heading {
+  display: flex;
+}
+
+.heading img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 3rem;
+  top: 3.5rem;
+}
+
+h1 {
+  color: white;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+  padding-top: 1.2rem;
+  position: absolute;
+  left: 10rem;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.navbar {
+  width: 50%;
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+}
+
+.navbar ul li {
+  list-style-type: none;
+  padding: 8px 15px;
+  transition: 0.2s ease-in;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul li:hover {
+  background-color: blue;
+}
+
+.navbar .menubtn {
+  font-size: 25px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.sideNav {
+  height: 100%;
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  background-color: #01050f;
+  overflow-x: hidden;
+  transition: 0.3s ease-in;
+  padding-top: 60px;
+  display: none;
+}
+
+.sideNav a {
+  padding: 8px 8px 8px 40px;
+  display: block;
+  font-size: 1.7rem;
+  transition: 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+.sideNav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+@media (max-width: 560px) {
+  h1 {
+  font-size: 2.1rem;
+  padding-top: 1.8rem;
+  left: 8rem;
+ }
+  
+  .heading img {
+  width: 40px;
+  height: 40px;
+  left: 3rem;
+  top: 3.5rem;
+}
+  .navbar .menubtn {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+  }
+  .navbar #nav-link {
+    display: none;
+  }
+  .sideNav {
+    display: block;
+    z-index: 1;
+  }
+}
+
+/*main page*/
+main {
+  width: 100%;
+  position: absolute;
+  top: 12rem;
+  color: #e4f5e7;
+  font-size: 1.5rem;
+}
+
+main a {
+  color: blue;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #0e0961;
+}
+
+/*SLIDESHOW SECTION*/
+.image-slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+img {
+  width: 100%
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+/*Icon section*/
+.social-icons {
+  display: flex;
+  font-size: 2rem;
+  position: absolute;
+  left: 70%;
+}
+
+.fab:hover {
+  font-size: 3rem;
+}
+
+.fab {
+  padding: 1.5rem;
+}
+
+/*About section*/
+h2, h3, h4 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+hr {
+  margin: 1rem;
+}
+
+.about,
+.signals,
+.subcription,
+.our-channels,
+.projects {
+  width: 50%;
+  margin: 70px auto;
+  padding: 50px 0;
+  background-color: rgba(194, 204, 240, 0.5);
+  color: #01050f;
+}
+.subcription {
+  height: 69rem;
+}
+.signals {
+  padding: 50px 20px;
+}
+
+.projects,
+.our-channels {
+  text-align: center;
+}
+
+.projects p {
+  margin: 1rem;
+}
+
+.order {
+  display: inline-block;
+  text-align: left;
+}
+
+table {
+  position: absolute;
+  left: 42.5%;
+}
+
+.pad {
+  padding-right: 1rem;
+}
+
+.padd {
+  padding-left: 1rem;
+}
+
+.pay button {
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid blue;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto 1rem auto;
+  border-radius: 5%;
+  color: white;
+}
+
+button:hover {
+  font-size: 1rem;
+}
+
+.pm {
+  width: 8rem;
+  height: 4rem;
+  padding-right: 2rem;
+}
+
+.btc {
+  width: 5rem;
+  height: 4rem;
+  padding-right: 3rem;
+}
+
+.usdt {
+  width: 3rem;
+  height: 4rem;
+}
+
+.payment {
+  width: 38rem;
+  height: 5rem;
+  margin: auto;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: #01050f;
+  color: white;
+  text-align: center;
+}
+
+.faq {
+  width: 70rem;
+  height: 20rem;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hide1,
+.hide2, 
+.hide3, 
+.hide4 {
+  display: none;
+  margin: 1rem;
+}
+
+.question1:hover + .hide1,
+.question2:hover + .hide2,
+.question3:hover + .hide3,
+.question4:hover + .hide4 {
+  display: block;
+  color: blue;
+}
+
+.space {
+  margin: 1rem;
+}
+
+@media (max-width: 560px) {
+  .about, .signals, .projects, .our-channels, .subcription {
+    width: 98%;
+  }
+  
+  .fab {
+    padding: 0.35rem;
+  }
+  
+  table {
+  position: absolute;
+  left: 29%;
+  }
+  
+  .faq {
+    width: 95%;
+    height: 25rem;
+  }
+}
